@@ -1,0 +1,26 @@
+.SliderBtns{
+    gap: 24px;
+    &_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 18px;
+        background-color: #0D0D0D;
+        cursor: pointer;
+        transition: background-color 300ms;
+        img{
+            width: 12px;
+            height: 24px;
+            transition: filter 300ms
+        }
+        &_right{
+            rotate: 180deg;
+        }
+        &:hover{
+            background-color: #FFF;
+            img{
+                filter: invert(1);
+            }
+        }
+    }
+}

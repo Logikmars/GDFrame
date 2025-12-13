@@ -1,0 +1,20 @@
+.LanguageSwitch{
+    width: fit-content;
+    background-color: #ffffff21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    &_el{
+        color: #ffffff54;
+        font-family: "StapelSemiExpandedMedium";
+        font-size: 16px;
+        cursor: pointer;
+        transition: color 300ms;
+        &_active{
+            color: #FFF;
+            cursor: default;
+        }
+    }
+}

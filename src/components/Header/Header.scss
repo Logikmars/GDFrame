@@ -1,0 +1,44 @@
+.Header{
+    background: transparent;
+    z-index: 2;
+    width: 100%;
+    &_container{
+        padding: 24px;
+        justify-content: space-between !important;
+        gap: 20px;
+    }
+    &_logo{
+        width: 20%;
+    }
+    &_content{
+        width: 80%;
+        justify-content: space-between !important;
+        gap: 20px;
+        &_nav{
+            width: 90%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 24px;
+            &_el{
+                color: #FFF;
+                opacity: .64;
+                font-family: "StapelSemiExpandedMedium";
+                font-weight: 500;
+                font-size: 16px;
+                text-transform: uppercase;
+                transition: opacity 300ms;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &_switch{
+            width: 10%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+        }
+    }
+}

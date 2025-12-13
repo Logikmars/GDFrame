@@ -1,0 +1,38 @@
+.Contact{
+    width: fit-content;
+    gap: 26px;
+    justify-content: end;
+    &_btn{
+        color: #000;
+        font-family: "StapelMedium";
+        font-weight: 500;
+        font-size: 28px;
+        cursor: pointer;
+        // TODO
+        // Сделать hover
+
+        &_invert{
+            color: #FFF !important;
+        }
+    }
+    &_btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        &_el{
+            width: 32px;
+            height: 32px;
+            &_invert{
+                filter: invert(1);
+            }
+        }
+    }
+
+
+    &_invert{
+        background-color: rgba($color: #F5F5F5, $alpha: .04);
+        backdrop-filter: blur(5px);
+        padding: 24px;
+    }
+}

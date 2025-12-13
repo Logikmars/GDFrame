@@ -1,0 +1,44 @@
+.Type{
+    gap: 8px;
+    color: #6CFBEF;
+    font-family: "Inter";
+    font-weight: 700;
+    &_block{
+        width: 22px;
+        height: 22px;
+        flex-wrap: wrap;
+        &_decor_top, &_decor_bottom{
+            min-width: 100% !important;
+            justify-content: space-between !important;
+            &_arrow{
+                path{
+                    stroke: #6CFBEF;
+                }
+                width: 7px;
+                height: 7px;
+                &_left{
+                    rotate: 270deg;
+                }
+            }
+        }
+        &_item{
+            width: 10px;
+            height: 10px;
+            background-color: #6CFBEF;
+        }
+        &_decor_bottom{
+            &_arrow{
+                &_left{
+                    rotate: 180deg;
+                }
+                &_right{
+                    rotate: 90deg;
+                }
+            }
+        }
+    }
+    &_text{
+        font-family: "Inter";
+        font-weight: 700;
+    }
+}

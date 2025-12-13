@@ -1,0 +1,15 @@
+.Project{
+    width: calc(33% - 24px);
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 24px;
+
+
+
+
+
+    &_big{
+        width: calc(50% - 24px);
+    }
+}
