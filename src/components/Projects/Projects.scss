@@ -2,4 +2,9 @@
     margin-top: 166px;
     padding: 0px 24px;
     z-index: 3;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 96px;
 }

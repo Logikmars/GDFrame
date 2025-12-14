@@ -4,9 +4,33 @@
     justify-content: start;
     flex-wrap: wrap;
     gap: 24px;
-
-
-
+    &_header{
+        width: 100%;
+        justify-content: start !important;
+        gap: 24px;
+    }
+    &_content{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &_title{
+        width: 100%;
+        font-family: "StapelSemiExpandedMedium";
+        color: #6CFBEF;
+        font-size: 28px;
+        &_small{
+            font-size: 20px !important;
+        }
+    }
+    &_description{
+        width: 100%;
+        font-family: "Inter";
+        font-weight: 500;
+        color: #E4EDF2;
+        font-size: 18px;
+    }
 
 
     &_big{

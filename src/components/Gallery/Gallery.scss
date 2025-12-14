@@ -1,0 +1,17 @@
+.Gallery{
+    margin-top: 160px;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-content: start;
+    align-items: start !important;
+    z-index: 3;
+    &_col{
+        width: calc(100% / 6 - 24px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        img{
+            width: 100%;
+        }
+    }
+}
