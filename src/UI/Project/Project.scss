@@ -4,10 +4,19 @@
     justify-content: start;
     flex-wrap: wrap;
     gap: 24px;
+    @media(max-width: 1010px){
+        width: calc(50% - 24px);
+    }
+    @media(max-width: 600px){
+        width: calc(100% - 24px);
+    }
     &_header{
         width: 100%;
         justify-content: start !important;
         gap: 24px;
+        @media(max-width: 600px){
+            flex-wrap: wrap;
+        }
     }
     &_content{
         width: 100%;
@@ -22,6 +31,12 @@
         font-size: 28px;
         &_small{
             font-size: 20px !important;
+            @media(max-width: 600px){
+                font-size: 14px;
+            }
+        }
+        @media(max-width: 600px){
+            font-size: 16px;
         }
     }
     &_description{
@@ -35,5 +50,8 @@
 
     &_big{
         width: calc(50% - 24px);
+        @media(max-width: 1010px){
+            width: calc(100% - 24px);
+        }
     }
 }

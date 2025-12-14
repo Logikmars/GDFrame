@@ -2,14 +2,18 @@
     width: fit-content;
     gap: 26px;
     justify-content: end;
+    @media(max-width: 1000px){
+        gap: 13px;
+    }
     &_btn{
         color: #000;
         font-family: "StapelMedium";
         font-weight: 500;
         font-size: 28px;
         cursor: pointer;
-        // TODO
-        // Сделать hover
+        @media(max-width: 1000px){
+            font-size: 14px;
+        }
 
         &_invert{
             color: #FFF !important;
@@ -20,9 +24,16 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
+        @media(max-width: 1000px){
+            gap: 8px;
+        }
         &_el{
             width: 32px;
             height: 32px;
+            @media(max-width: 1000px){
+                width: 16px;
+                height: 16px;
+            }
             &_invert{
                 filter: invert(1);
             }

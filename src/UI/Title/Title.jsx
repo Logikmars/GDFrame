@@ -1,7 +1,7 @@
 import './Title.scss';
-export default ({ title }) => {
+export default ({ title, small }) => {
     return (
-        <div className='Title'>
+        <div className={`Title ${small && 'Title_small'}`}>
             {title}
         </div>
     )

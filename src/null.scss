@@ -162,12 +162,17 @@ body {
 .container{
     max-width: 1900px;
     width: 100%;
+    padding: 0px 24px;
 }
 
 .fcc{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.pa24{
+    padding: 0px 24px;
 }
 
 // Scroll

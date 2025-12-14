@@ -1,0 +1,25 @@
+.UpBtn{
+    width: 64px;
+    height: 64px;
+    background-color: #FFF;
+    transition: background-color 300ms;
+    @media(max-width: 650px){
+        width: 32px;
+        height: 32px;
+    }
+    img{
+        width: 24.5px;
+        height: 24px;
+        transition: filter 300ms;
+        @media(max-width: 650px){
+            width: 12px;
+            height: 12px;
+        }
+    }
+    &:hover{
+        background-color: #000;
+        img{
+            filter: invert(1);
+        }
+    }
+}

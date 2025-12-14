@@ -6,4 +6,13 @@
     font-size: 40px;
     font-family: "StapelSemiExpandedMedium";
     text-transform: uppercase;
+    &_small{
+        font-size: 28px !important;
+    }
+    @media(max-width: 600px){
+        font-size: 24px;
+    }
+    @media(max-width: 430px){
+        justify-content: center;
+    }
 }
