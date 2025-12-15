@@ -16,7 +16,7 @@ export default () => {
                         <Percent percent={94}/>
                     </div>
                     <div className='Hero_down_contact fcc'>
-                        <Contact />
+                        {/* <Contact /> */}
                     </div>
                 </div>
             </div>

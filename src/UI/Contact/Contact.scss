@@ -2,6 +2,7 @@
     width: fit-content;
     gap: 26px;
     justify-content: end;
+    padding: 24px;
     @media(max-width: 1000px){
         gap: 13px;
     }
@@ -44,6 +45,5 @@
     &_invert{
         background-color: rgba($color: #F5F5F5, $alpha: .04);
         backdrop-filter: blur(5px);
-        padding: 24px;
     }
 }

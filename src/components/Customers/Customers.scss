@@ -13,15 +13,16 @@
         }
     }
 
-    &_decor {
-        min-width: 100% !important;
-        justify-content: end !important;
-        align-items: start !important;
-        margin-top: 48px;
-        z-index: 1;
-    }
+    // &_decor {
+    //     min-width: 100% !important;
+    //     justify-content: end !important;
+    //     align-items: start !important;
+    //     margin-top: 48px;
+    //     z-index: 1;
+    // }
 
     &_slider {
+        margin-top: 48px;
         width: 100%;
         overflow: hidden;
 

@@ -157,6 +157,17 @@ body {
     justify-content: center;
     background-color: #111111 !important;
     overflow-x: hidden;
+    &_contact{
+        position: fixed !important;
+        min-width: 100% !important;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        z-index: 9999999999999;
+        inset: 0;
+        top: 92%;
+        padding-right: 24px;
+    }
 }
 
 .container{

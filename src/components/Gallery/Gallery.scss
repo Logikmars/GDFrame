@@ -12,24 +12,41 @@
     @media(max-width: 500px){
         gap: 6px;
     }
+
+    &_content{
+        column-count: 6;
+        column-gap: 12px;
+        @media(max-width: 1250px){
+            column-count: 5;
+        }
+        @media(max-width: 800px){
+            column-count: 4;
+        }
+        @media(max-width: 650px){
+            column-count: 3;
+        }
+        @media(max-width: 460px){
+            column-count: 2;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
     &_col{
-        width: calc(100% / 6 - 24px);
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        @media(max-width: 1000px){
-            gap: 12px;
-            width: calc(100% / 6 - 12px);
-        }
-        @media(max-width: 500px){
-            gap: 6px;
-            width: calc(100% / 6 - 6px);
-        }
         &_el{
-            width: 100% !important;
             background-color: #FFF;
             flex-wrap: wrap;
             align-content: space-between;
+            /* Prevent items from being split between columns */
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 12px;
+            height: fit-content;
             &:hover{
                 img{
                     scale: .95;
@@ -114,6 +131,8 @@
   inset: 0;
   background: rgba(0,0,0,.9);
   z-index: 999999999;
+    opacity: 1;
+    transition: opacity 500ms ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,7 +140,7 @@
     &_img {
         position: absolute;
         object-fit: contain;
-        transition: top 500ms ease, left 500ms ease, width 500ms ease, height 500ms ease, transform 500ms ease;
+                transition: top 500ms ease, left 500ms ease, width 500ms ease, height 500ms ease, transform 500ms ease, opacity 500ms ease;
 
         &.active {
             top: 50%;
@@ -131,6 +150,13 @@
             transform: translate(-50%, -50%);
         }
     }
+        &.closing {
+            opacity: 0;
+            pointer-events: none;
+            .Gallery_modal_img {
+                opacity: 0;
+            }
+        }
     &_left, &_right{
         width: 10%;
         height: 100vh;

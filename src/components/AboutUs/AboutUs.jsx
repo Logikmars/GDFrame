@@ -1,15 +1,16 @@
 import Title from '../../UI/Title/Title';
 import './AboutUs.scss';
 import { useTranslation } from 'react-i18next';
+import { forwardRef } from 'react';
 
-export default () => {
+const AboutUs = forwardRef((props, ref) => {
 
     const { t } = useTranslation();
 
     const els = ['./fGuy.webp', './secGuy.webp']
 
     return (
-        <div className='AboutUs container fcc'>
+        <div className='AboutUs container fcc' ref={ref}>
             <Title title={t('aboutUs.title')} />
             <div className='AboutUs_content'>
                 <div className='AboutUs_content_left'></div>
@@ -42,4 +43,6 @@ export default () => {
             </div>
         </div>
     )
-}
+});
+
+export default AboutUs;
