@@ -1,24 +1,34 @@
 import Title from '../../UI/Title/Title';
 import './Footer.scss';
-export default () => {
+import { useTranslation } from 'react-i18next';
 
-    const list = ['Music videos', 'YouTube shows', 'Commercials and brand films', 'Fashion and lifestyle campaigns', 'Event coverage', 'Photo production']
+export default () => {
+    const { t } = useTranslation();
+
+    const list = [
+        t('footer.musicVideos'),
+        t('footer.youtubeShows'),
+        t('footer.commercials'),
+        t('footer.fashionCampaigns'),
+        t('footer.eventCoverage'),
+        t('footer.photoProduction')
+    ];
 
     const contact = [
         {
-            title: 'Project requests',
+            title: t('footer.projectRequests'),
             src: 'hello@gdframe.studio',
             href: 'mailto:hello@gdframe.studio'
         },
         {
-            title: 'Direct messages',
+            title: t('footer.directMessages'),
             src: '@Telegram'
         },
         {
-            title: 'Portfolio and updates',
+            title: t('footer.portfolioUpdates'),
             src: '@Instagram'
         }
-    ]
+    ];
 
     return (
         <div className='Footer fcc'>
@@ -27,38 +37,38 @@ export default () => {
                     <div className='Footer_top_left'>
                         <Title title={'GD FRAME'} small/>
                         <div className='Footer_top_left_text'>
-                            Full cycle video production studio.
+                            {t('footer.leftText')}
                         </div>
                         <div className='Footer_top_left_description'>
-                            We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.
+                            {t('footer.leftDescription')}
                         </div>
                     </div>
                     <div className='Footer_top_middle'>
-                        <Title title={'What we do'} small/>
+                        <Title title={t('footer.whatWeDo')} small/>
                         <div className='Footer_top_middle_list'>
-                            {
-                                list.map((el, index) => (
-                                    <div className='Footer_top_middle_list_el' key={`Footer_top_middle_list_el_${index}`}>{el}</div>
-                                ))
-                            }
+                            {list.map((el, index) => (
+                                <div className='Footer_top_middle_list_el' key={`Footer_top_middle_list_el_${index}`}>{el}</div>
+                            ))}
                         </div>
                     </div>
                     <div className='Footer_top_right'>
-                        <Title title={'Collaboration'} small/>
+                        <Title title={t('footer.collaboration')} small/>
                         <div className='Footer_top_right_text'>
-                            We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.
+                            {t('footer.rightText')}
                         </div>
                         <div className='Footer_top_right_contact'>
-                            {
-                                contact.map((el, index) => (
-                                    <div className='Footer_top_right_contact_el' key={`Footer_top_right_contact_el_${index}`}>
-                                        <div className='Footer_top_right_contact_el_top'>{el.title}</div>
+                            {contact.map((el, index) => (
+                                <div className='Footer_top_right_contact_el' key={`Footer_top_right_contact_el_${index}`}>
+                                    <div className='Footer_top_right_contact_el_top'>{el.title}</div>
+                                    {el.href ? (
                                         <a href={el.href} className='Footer_top_right_contact_el_bottom'>
                                             {el.src}
                                         </a>
-                                    </div>
-                                ))
-                            }
+                                    ) : (
+                                        <div className='Footer_top_right_contact_el_bottom'>{el.src}</div>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -67,7 +77,7 @@ export default () => {
                         © GD FRAME
                     </div>
                     <div className='Footer_policy_content'>
-                        Content is an instrument of growth
+                        {t('footer.policyContent')}
                     </div>
                 </div>
                 <div className='Footer_decor free_img'>

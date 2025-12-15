@@ -3,8 +3,11 @@ import Contact from '../../UI/Contact/Contact';
 import SliderBtns from '../../UI/SliderBtns/SliderBtns';
 import Title from '../../UI/Title/Title';
 import './Customers.scss';
+import { useTranslation } from 'react-i18next';
 
 export default () => {
+
+    const { t } = useTranslation();
 
     const els = [
         { src: './customers/yodezeen.webp', title: 'yodezeen' },
@@ -41,7 +44,7 @@ export default () => {
     return (
         <div className='Customers container fcc'>
             <div className='Customers_header fcc'>
-                <Title title='Our customers' />
+                <Title title={t('customers.title')} />
                 <SliderBtns onPrev={prev} onNext={next} />
             </div>
 

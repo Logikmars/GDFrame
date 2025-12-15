@@ -2,9 +2,19 @@ import { useState } from 'react';
 import LanguageSwitch from '../../UI/LanguageSwitch/LanguageSwitch';
 import Logo from '../../UI/Logo/Logo';
 import './Header.scss';
+import { useTranslation } from 'react-i18next';
+
 export default () => {
 
-    const els = ['Photo production', 'Video production', 'About us', 'Clients', 'Contact']
+    const { t } = useTranslation();
+
+    const els = [
+        t('header.photo'),
+        t('header.video'),
+        t('header.about'),
+        t('header.clients'),
+        t('header.contact'),
+    ];
 
     const [active, setactive] = useState(false);
 

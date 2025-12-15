@@ -1,5 +1,9 @@
 import './Contact.scss';
+import { useTranslation } from 'react-i18next';
+
 export default ({ invert }) => {
+
+    const { t } = useTranslation();
 
     const media = ['./social/insta.svg', './social/x.svg', './social/tg.svg', './social/mail.svg']
 
@@ -10,7 +14,7 @@ export default ({ invert }) => {
     return (
         <div className={`Contact fcc ${invert ? 'Contact_invert' : ''}`}>
             <div className={`Contact_btn ${invert ? 'Contact_btn_invert' : ''}`} onClick={handleClick}>
-                CONTACT US
+                {t('contactUs.title')}
             </div>
             <div className='Contact_btns'>
                 {

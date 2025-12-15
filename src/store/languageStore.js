@@ -1,16 +1,17 @@
 import { makeAutoObservable } from "mobx";
+import i18n from "../i18n";
 
-class languageStore {
-  
-  activeLanguage = 'ENG'
+class LanguageStore {
+  activeLanguage = 'ENG';
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  setActiveLanguage(lang){
-    this.activeLanguage = lang
+  setActiveLanguage(lang) {
+    this.activeLanguage = lang;
+    i18n.changeLanguage(lang);
   }
 }
 
-export default new languageStore();
+export default new LanguageStore();

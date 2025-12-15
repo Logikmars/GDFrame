@@ -1,12 +1,16 @@
 import Title from '../../UI/Title/Title';
 import './AboutUs.scss';
+import { useTranslation } from 'react-i18next';
+
 export default () => {
+
+    const { t } = useTranslation();
 
     const els = ['./fGuy.webp', './secGuy.webp']
 
     return (
         <div className='AboutUs container fcc'>
-            <Title title={'About us'} />
+            <Title title={t('aboutUs.title')} />
             <div className='AboutUs_content'>
                 <div className='AboutUs_content_left'></div>
                 <div className='AboutUs_content_right'>

@@ -1,67 +1,71 @@
 import Project from '../../UI/Project/Project';
 import './Projects.scss';
+import { useTranslation } from 'react-i18next';
+
 export default () => {
+
+    const { t } = useTranslation();
 
     const projects = [
         {
             big: true,
-            type: 'Type',
-            typetext: 'Video production',
-            director: 'Director',
-            directortext: 'Dima Davydiuk',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
+            director: t('projects.director'),
+            directortext: t('projects.directorNameF'),
             img: './videosScreen/car.webp',
-            title: 'ALEX SLOBOZHENKO | YOUTUBE | LAMBORGHINI REVUELTO RECORDING BY GD.FRAME',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.title'),
+            description: t('projects.description')
         },
         {
             big: true,
-            type: 'Type',
-            typetext: 'Video production',
-            director: 'Director',
-            directortext: 'Dima Davydiuk',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
+            director: t('projects.director'),
+            directortext: t('projects.directorNameF'),
             img: './videosScreen/plane.webp',
-            title: 'ALEX SLOBOZHENKO | YOUTUBE | LAMBORGHINI REVUELTO RECORDING BY GD.FRAME',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.title'),
+            description: t('projects.description')
         },
         {
             big: false,
-            type: 'Type',
-            typetext: 'Video production',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
             img: './videosScreen/biznes.webp',
-            title: 'ZLOY & MISTER BIZNES | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.descriprionBiznes'),
+            description: t('projects.description')
         },
         {
             big: false,
-            type: 'Type',
-            typetext: 'Video production',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
             img: './videosScreen/kizaru.webp',
-            title: 'ZLOY & KIZARU | YOUTUBE | RECORDING BY GD.FRAME',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.descriprionKizaru'),
+            description: t('projects.description')
         },
         {
             big: false,
-            type: 'Type',
-            typetext: 'Video production',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
             img: './videosScreen/carLight.webp',
-            title: 'PAVEL ANTONOV | RECORDING',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.descriprionPavel'),
+            description: t('projects.description')
         },
         {
             big: false,
-            type: 'Type',
-            typetext: 'Video production',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
             img: './videosScreen/man.webp',
-            title: 'PAVEL ANTONOV | RECORDING',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.descriprionPavel'),
+            description: t('projects.description')
         },
         {
             big: false,
-            type: 'Type',
-            typetext: 'Video production',
+            type: t('projects.type'),
+            typetext: t('projects.video'),
             img: './videosScreen/joker.webp',
-            title: 'JOKER KRASIVO PROJECT RECORDING & EDIT',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон'
+            title: t('projects.descriprionJoker'),
+            description: t('projects.description')
         }
     ]
 
