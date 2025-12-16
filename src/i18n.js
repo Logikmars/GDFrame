@@ -41,16 +41,16 @@ i18n
             descriptionSloboj: 'Filming a YouTube video for Alexander Slobozhenko; we completed the shoot with two camera operators and also used an FPV drone.',
             titleBiznes: 'WHAT MR. BIZNES BOUGHT FOR $50,000 CHALLENGE',
             descriptionBisznes: 'Filming and editing a turnkey YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring Alexander "Mr. Business." Full production and dynamic visual filming.',
-            titleBarber: 'BARBER | RECORDING',
+            titleBarber: 'Kizaru | Warsaw concert',
             descriptionBarber: 'Filming and full post-production for Kizaru concert performance in Warsaw. We implemented a turnkey project, from footage to final editing.',
-            titleKizaru: 'ZLOY & KIZARU | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
+            titleKizaru: 'KIZARU - What will you spend €50,000 on?',
             descriptionKizaru: 'Filming a YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring artist and rapper Oleg Kizaru. Full production on location, no editing.',
             titleMission: 'Mission Impossible',
-            descriptionMission: 'Filming a YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring artist and rapper Oleg Kizaru. Full production on location, no editing.',
+            descriptionMission: 'Shooting advertising creative for Pavel Antonov',
             TitlePavel: 'PAVEL ANTONOV | RECORDING',
             descriptionPavel: 'Shooting advertising creative for Pavel Antonov',
             TitleJoker: 'JOKER KRASIVO PROJECT RECORDING & EDIT',
-            descriptionJoker: 'Joker',
+            descriptionJoker: 'Filming a commercial for the Krasivo Project beauty salon, based on the film Joker. We handled the organization and execution of the shoot, recruiting the necessary crew, and post-production.',
           },
           footer: {
             musicVideos: 'Music videos',
@@ -105,20 +105,20 @@ i18n
             titleBiznes: 'ЧТО МИСТЕР БИЗНЕС КУПИЛ НА $50 000 — ЧЕЛЛЕНДЖ',
             descriptionBisznes: 'Съёмка и монтаж YouTube-видео под ключ для Артура Злого под названием «Как человек тратит $50 000?» с участием Александра «Мистер Бизнес». Полный продакшн и динамичная визуальная съёмка.',
 
-            titleBarber: 'BARBER | СЪЁМКА',
-            descriptionBarber: 'Съёмка и полный постпродакшн концертного выступления Kizaru в Варшаве. Мы реализовали проект под ключ — от материала до финального монтажа.',
+            titleBarber: 'Kizaru | концерт Варшава',
+            descriptionBarber: 'Съёмка и полный постпродакшн концертного выступления артиста Kizaru в Варшаве. Реализовали проект под ключ — от материала до финального монтажа.',
 
-            titleKizaru: 'ZLOY & KIZARU | YOUTUBE | СЪЁМКА И МОНТАЖ ОТ GD.FRAME',
+            titleKizaru: 'KIZARU - На что потратит 50 000€?',
             descriptionKizaru: 'Съёмка YouTube-видео для Артура Злого под названием «Как человек тратит $50 000?» с участием артиста и рэпера Олега Кизару. Полный продакшн на локации, без монтажа.',
 
             titleMission: 'Миссия невыполнима',
-            descriptionMission: 'Съёмка YouTube-видео для Артура Злого под названием «Как человек тратит $50 000?» с участием артиста и рэпера Олега Кизару. Полный продакшн на локации, без монтажа.',
+            descriptionMission: 'Съёмка рекламного креатива для Павла Антонова',
 
             TitlePavel: 'ПАВЕЛ АНТОНОВ | СЪЁМКА',
             descriptionPavel: 'Съёмка рекламного креатива для Павла Антонова',
 
             TitleJoker: 'JOKER KRASIVO | СЪЁМКА И МОНТАЖ ПРОЕКТА',
-            descriptionJoker: 'Джокер'
+            descriptionJoker: 'Сьемка рекламного ролика для салона красоты Krasivo Project, по мотивам фильма Джокер. Забрали на себя организацию и проведение сьемки, поиск необходимой команды и постпродакшн'
           },
           footer: {
             musicVideos: 'Музыкальные видео',
