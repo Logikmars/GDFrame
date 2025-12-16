@@ -66,7 +66,14 @@ export default ({ show = false }) => {
                         <LanguageSwitch />
                         {
                             els.map((el, index) => (
-                                <a href='' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.text}</a>
+                                <a
+                                    onClick={() => {
+                                        smoothScrollTo(el.to)
+
+                                        setactive(false)
+                                    }}
+
+                                    className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.text}</a>
                             ))
                         }
                     </div>

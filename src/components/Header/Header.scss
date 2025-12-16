@@ -27,6 +27,7 @@
     &_logo {
         width: 10%;
         pointer-events: all;
+
         @media(max-width: 1000px) {
             width: 100%;
             display: flex;
@@ -82,8 +83,10 @@
                 text-transform: uppercase;
                 transition: opacity 300ms;
                 pointer-events: all;
+                cursor: pointer;
 
                 &:hover {
+
                     opacity: 1;
                 }
             }
