@@ -38,7 +38,7 @@ export default () => {
             img: './videosScreen/biznes.webp',
             title: t('projects.titleBarber'),
             description: t('projects.descriptionBarber'),
-            href: 'https://youtu.be/RApaChu5H9w'
+            href: 'https://www.youtube.com/watch?v=xZs_2ne98Kw'
 
             // barber
         },

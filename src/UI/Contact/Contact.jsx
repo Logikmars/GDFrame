@@ -14,7 +14,7 @@ export default ({ invert }) => {
         },
         {
             img: './social/tg.svg',
-            href: 'https://t.me/gdframe_manager'
+            href: 'https://t.me/gdframee'
         },
         {
             img: './social/mail.svg',
@@ -33,7 +33,7 @@ export default ({ invert }) => {
 
     return (
         <div className={`Contact fcc ${invert ? 'Contact_invert' : ''}`} id='contact'>
-            <a className={`Contact_btn ${invert ? 'Contact_btn_invert' : ''}`} onClick={handleClick} href='https://t.me/gdframee' target='_blanck'>
+            <a className={`Contact_btn ${invert ? 'Contact_btn_invert' : ''}`} onClick={handleClick} href='https://t.me/gdframe_manager' target='_blanck'>
                 {t('contactUs.title')}
             </a>
             <div className='Contact_btns'>
