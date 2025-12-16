@@ -1,30 +1,76 @@
 .Hero {
-    width: 100dvw;
-    height: 100vh;
-    padding: 24px;
+    width: 100vw;
+    height: 7000px;
     background-color: #FFF;
     z-index: 2;
-    padding-bottom: 22px;
 
     &_container {
-        padding: 24px;
-        height: 100%;
-        flex-wrap: wrap;
-        align-content: space-between;
+        padding: 12px;
+        height: 100vh;
+        // flex-wrap: wrap;
+        // align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        // background: #f008;
+        @media(max-width: 700px) {
+            padding-bottom: 60px;
+        }
     }
 
+    &_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        &_img {
+            transition: opacity 300ms;
+            opacity: 0;
+            // вместо sass-переменной — CSS custom property (точно работает в media)
+            --size_kef: .95;
+
+            @media (max-width: 700px) {
+                --size_kef: 1.2;
+            }
+
+            @mixin imgSize($size) {
+                img {
+                    min-height: calc(#{$size} * var(--size_kef) * 100vh);
+                    max-height: calc(#{$size} * var(--size_kef) * 100vh);
+                    max-width: calc(#{$size} * var(--size_kef) * 100vw);
+                }
+            }
+
+            &_5 {
+                @include imgSize(.8);
+            }
+
+            &_4 {
+                @include imgSize(.84);
+            }
+
+            &_3 {
+                @include imgSize(.5);
+            }
+
+            &_2 {
+                @include imgSize(.36);
+            }
+
+            &_1 {
+                @include imgSize(.28);
+            }
+        }
+    }
 
     &_down {
         width: 100%;
-        justify-content: space-between !important;
+        justify-content: center !important;
         gap: 20px;
 
-        &_contact,
-        &_inner,
-        &_percent {
-            width: calc(33% - 20px);
-        }
 
         &_contact {
             justify-content: end !important;

@@ -1,25 +1,84 @@
-import Contact from '../../UI/Contact/Contact';
+import { useRef, useState } from 'react';
 import Logo from '../../UI/Logo/Logo';
 import Percent from '../../UI/Percent/Percent';
 import './Hero.scss';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 export default () => {
 
+    const scope = useRef(null)
+    const [progress, setprogress] = useState(0);
 
+    useGSAP(() => {
+        gsap.to('.Hero', {
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.Hero',
+                scrub: 1,
+                start: `0% 0%`,
+                end: `100% 100%`,
+                pin: '.Hero_container',
+                // markers: true,
+                pinSpacing: true,
+                anticipatePin: 1,
+                onUpdate: self => {
+                    setprogress(self.progress)
+                }
+            }
+        });
+    }, { scope })
 
     return (
-        <div className='Hero fcc'>
-            <div className='container Hero_container fcc'>
-                <Logo />
-                <div className='Hero_content'>
-                    {/* TODO */}
-                </div>
-                <div className='Hero_down fcc'>
-                    <div className='Hero_down_inner'></div>
-                    <div className='Hero_down_percent fcc'>
-                        <Percent percent={94} />
+        <div ref={scope}>
+            <div className='Hero'>
+                <div className='Hero_container'>
+                    <Logo />
+                    <div className='Hero_content'>
+                        <div className='free_img Hero_content_img Hero_content_img_1'
+                            style={{
+                                opacity: progress < .5 ? 0 : 1
+                            }}
+                        >
+                            <img src="/heroDecor/1.svg" alt="" style={{
+                                transform: `rotate(${progress * 50}deg)`
+                            }} />
+                        </div>
+                        <div className='free_img Hero_content_img Hero_content_img_2'
+                            style={{
+                                opacity: progress < .4 ? 0 : 1
+                            }}
+                        >
+                            <img src="/heroDecor/2.svg" alt="" style={{
+                                transform: `rotate(${progress * -80}deg)`
+                            }} />
+                        </div>
+                        <div className='free_img Hero_content_img Hero_content_img_3'
+                            style={{
+                                opacity: progress < .1 ? 0 : 1
+                            }}>
+                            <img src="/heroDecor/3.svg" alt="" style={{
+                                transform: `rotate(${progress * 20}deg)`
+                            }} />
+                        </div>
+                        <div className='free_img Hero_content_img Hero_content_img_4'
+                            style={{
+                                opacity: progress < .2 ? 0 : 1
+                            }}>
+                            <img src="/heroDecor/4.svg" alt="" style={{
+                                transform: `rotate(${progress * -10}deg)`
+                            }} />
+                        </div>
+                        <div className='free_img Hero_content_img Hero_content_img_5'
+                            style={{
+                                opacity: progress < .6 ? 0 : 1
+                            }}>
+                            <img src="/heroDecor/5.svg" alt="" style={{
+                                transform: `rotate(${progress * 100}deg)`
+                            }} />
+                        </div>
                     </div>
-                    <div className='Hero_down_contact fcc'>
-                        {/* <Contact /> */}
+                    <div className='Hero_down fcc'>
+                        <Percent percent={Math.floor(progress * 100)} />
                     </div>
                 </div>
             </div>

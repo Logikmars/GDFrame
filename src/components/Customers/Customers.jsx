@@ -10,16 +10,16 @@ export default () => {
     const { t } = useTranslation();
 
     const els = [
-        { src: './customers/yodezeen.webp', title: 'yodezeen' },
-        { src: './customers/annatrincher.webp', title: 'annatrincher' },
-        { src: './customers/slobozhenko.webp', title: <>alex <br /> slobozhenko</> },
-        { src: './customers/zloylive.webp', title: 'zloylive' },
-        { src: './customers/korolova.webp', title: 'korolova.dj' },
-        { src: './customers/kizaru.webp', title: <>OLEG <br /> KIZARU</> },
-        { src: './customers/tymoshenko.webp', title: 'tymoshenko' },
-        { src: './customers/lerarumaa.webp', title: 'lera_rumaa' },
-        { src: './customers/lera.webp', title: 'lera_rumaa' },
-        { src: './customers/sashachistova.webp', title: 'sashachistova' }
+        { src: './customers/yodezeen_2x_hq.webp', title: 'yodezeen' },
+        { src: './customers/annatrincher_2x_hq.webp', title: 'annatrincher' },
+        { src: './customers/slobozhenko_2x_hq.webp', title: <>alex <br /> slobozhenko</> },
+        { src: './customers/zloylive_2x_hq.webp', title: 'zloylive' },
+        { src: './customers/korolova_2x_hq.webp', title: 'korolova.dj' },
+        { src: './customers/kizaru_2x_hq.webp', title: <>OLEG <br /> KIZARU</> },
+        { src: './customers/tymoshenko_2x_hq.webp', title: 'tymoshenko' },
+        { src: './customers/lerarumaa_2x_hq.webp', title: 'lera_rumaa' },
+        { src: './customers/lera_2x_hq.webp', title: 'lera_rumaa' },
+        { src: './customers/sashachistova_2x_hq.webp', title: 'sashachistova' }
     ];
 
     const CARD_WIDTH = 178 + 24;

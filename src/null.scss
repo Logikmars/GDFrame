@@ -174,10 +174,11 @@ body {
         display: flex;
         justify-content: end;
         align-items: end !important;
-        z-index: 9999999999999;
+        z-index: 10;
         inset: 0;
         top: 92%;
         padding-right: 24px;
+        pointer-events: none;
     }
 }
 

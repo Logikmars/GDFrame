@@ -8,7 +8,7 @@
     background: linear-gradient(to bottom, #000, #0000);
     opacity: 0;
     transition: opacity 500ms;
-
+    pointer-events: none;
 
 
     &_show {

@@ -4,7 +4,7 @@ import AboutUs from './components/AboutUs/AboutUs'
 import Background from './components/Background/Background'
 import Customers from './components/Customers/Customers'
 import Footer from './components/Footer/Footer'
-import Gallery from './components/Gallery/Gallery'
+import { Gallery, GalleryModal } from './components/Gallery/Gallery'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Projects from './components/Projects/Projects'
@@ -39,10 +39,10 @@ function App() {
       }
     );
 
-    const bottomObs = new IntersectionObserver(
-      ([e]) => setbotInvert(!e.isIntersecting),
-      { threshold: 0, rootMargin: '-99% 0px 0px 0px' } // нижняя "полоса" 1% экрана
-    );
+    const bottomObs = new IntersectionObserver(([e]) => {
+      // true, когда элемент УЖЕ ниже нижней границы экрана
+      setbotInvert(!(e.boundingClientRect.bottom > window.innerHeight));
+    });
 
     topObs.observe(el);
     bottomObs.observe(el);
@@ -71,24 +71,86 @@ function App() {
 
 
 
+  // GALLERY
+  const TOTAL = 36;
+
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [rect, setRect] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  const isOpen = activeIndex !== null;
+
+  const open = (e, idx) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    setRect(r);
+    setActiveIndex(idx);
+    setExpanded(false);
+    requestAnimationFrame(() => setExpanded(true));
+  };
+
+  const close = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setClosing(false);
+      setActiveIndex(null);
+      setRect(null);
+      setExpanded(false);
+    }, 500);
+  };
+
+  const prev = () => {
+    setActiveIndex((i) => (i == null ? i : (i - 1 + TOTAL) % TOTAL));
+  };
+
+  const next = () => {
+    setActiveIndex((i) => (i == null ? i : (i + 1) % TOTAL));
+  };
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'Escape') close();
+    };
+
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
+
+
   return <>
     <Header show={showHeader} />
+
+    <GalleryModal
+      isOpen={isOpen}
+      activeIndex={activeIndex}
+      rect={rect}
+      expanded={expanded}
+      closing={closing}
+      onPrev={prev}
+      onNext={next}
+      onClose={close}
+      total={TOTAL}
+    />
     <div className="App_contact">
       <Contact invert={botInvert} />
     </div>
     <div className='App_wrapper' ref={wrapperRef}>
       <div className="App" ref={contentRef}>
-
         <Hero />
         <div className='heroTopRef' ref={heroTopRef} />
-        <Background />
         <AboutUs />
         <Customers />
         <Projects />
-        <Gallery />
+        {/* <Gallery /> */}
+        <Gallery onOpen={open} total={TOTAL} />
+
         <Footer />
-      </div>
-    </div>
+      </div >
+    </div >
   </>
 }
 
