@@ -23,8 +23,8 @@ i18n
             title: 'About us',
             leftTitle: 'We create visuals that feel.',
             blue: 'Simple. Clean. Precise.',
-            desTop: 'GD Frame — студия, которая помогает брендам говорить через образ.',
-            desBot: 'Мы снимаем рекламу, YouTube, подкасты и фото, которые остаются в памяти.'
+            desTop: 'GD Frame is a studio that helps brands communicate through image.',
+            desBot: 'We shoot commercials, YouTube videos, podcasts, and photos that last.'
           },
           customers: {
             title: 'Our customers'
@@ -37,12 +37,20 @@ i18n
             video: 'Video production',
             director: 'Director',
             directorNameF: 'Dima Davydiuk',
-            title: 'ALEX SLOBOZHENKO | YOUTUBE | LAMBORGHINI REVUELTO RECORDING BY GD.FRAME',
-            description: 'Filming a YouTube video for Alexander Slobozhenko; we completed the shoot with two camera operators and also used an FPV drone.',
-            descriprionBiznes: 'ZLOY & MISTER BIZNES | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
-            descriprionKizaru: 'ZLOY & KIZARU | YOUTUBE | RECORDING BY GD.FRAME',
-            descriprionPavel: 'PAVEL ANTONOV | RECORDING',
-            descriprionJoker: 'JOKER KRASIVO PROJECT RECORDING & EDIT'
+            titleSloboj: 'Bought a Lamborghini Revuelto! Race the Couriers! WHOS FASTER? LOBOZHENKO',
+            descriptionSloboj: 'Filming a YouTube video for Alexander Slobozhenko; we completed the shoot with two camera operators and also used an FPV drone.',
+            titleBiznes: 'WHAT MR. BIZNES BOUGHT FOR $50,000 CHALLENGE',
+            descriptionBisznes: 'Filming and editing a turnkey YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring Alexander "Mr. Business." Full production and dynamic visual filming.',
+            titleBarber: 'BARBER | RECORDING',
+            descriptionBarber: 'Filming and full post-production for Kizaru concert performance in Warsaw. We implemented a turnkey project, from footage to final editing.',
+            titleKizaru: 'ZLOY & KIZARU | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
+            descriptionKizaru: 'Filming a YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring artist and rapper Oleg Kizaru. Full production on location, no editing.',
+            titleMission: 'Mission Impossible',
+            descriptionMission: 'Filming a YouTube video for Artur Zloy, titled "How Does a Person Spend $50,000?" featuring artist and rapper Oleg Kizaru. Full production on location, no editing.',
+            TitlePavel: 'PAVEL ANTONOV | RECORDING',
+            descriptionPavel: 'Shooting advertising creative for Pavel Antonov',
+            TitleJoker: 'JOKER KRASIVO PROJECT RECORDING & EDIT',
+            descriptionJoker: 'Joker',
           },
           footer: {
             musicVideos: 'Music videos',
@@ -67,13 +75,17 @@ i18n
         translation: {
           header: {
             photo: 'Фотопродакшн',
-            video: 'Відеопродакшн',
+            video: 'Выдеопродакшн',
             about: 'Про нас',
-            clients: 'Клієнти',
+            clients: 'Клиенты',
             contact: 'Контакти'
           },
           aboutUs: {
-            title: 'Про нас'
+            title: 'Про нас',
+            leftTitle: 'Мы создаём визуальные образы, которые вызывают эмоции.',
+            blue: 'Просто. Чисто. Точно.',
+            desTop: 'GD Frame — студия, которая помогает брендам говорить через образ.',
+            desBot: 'Мы снимаем рекламу, YouTube, подкасты и фото, которые остаются в памяти.'
           },
           customers: {
             title: 'Наши клиенты'
@@ -84,14 +96,29 @@ i18n
           projects: {
             type: 'Тип',
             video: 'Видеопродакшн',
-            director: 'Директор',
-            directorNameF: 'Дима Давидук',
-            title: 'ALEX SLOBOZHENKO | YOUTUBE | СЪЁМКА LAMBORGHINI REVUELTO ОТ GD.FRAME',
-            description: 'Съёмка YouTube ролика для Александра Слобоженко, закрыли сьемку с 2 операторами + задействовали FPV дрон',
-            descriprionBiznes: 'ZLOY & MISTER BIZNES | YOUTUBE | СЪЁМКА & EDIT ОТ GD.FRAME',
-            descriprionKizaru: 'ZLOY & KIZARU | YOUTUBE | СЪЁМКА ОТ GD.FRAME',
-            descriprionPavel: 'PAVEL ANTONOV | СЪЁМКА',
-            descriprionJoker: 'JOKER KRASIVO PROJECT СЪЁМКА & EDIT'
+            director: 'Режиссёр',
+            directorNameF: 'Дима Давыдюк',
+
+            titleSloboj: 'Купил Lamborghini Revuelto! Гонка курьеров! КТО БЫСТРЕЕ? ЛОБОЖЕНКО',
+            descriptionSloboj: 'Съёмка YouTube-видео для Александра Слобоженко; мы провели съёмку с двумя операторами камер, а также использовали FPV-дрон.',
+
+            titleBiznes: 'ЧТО МИСТЕР БИЗНЕС КУПИЛ НА $50 000 — ЧЕЛЛЕНДЖ',
+            descriptionBisznes: 'Съёмка и монтаж YouTube-видео под ключ для Артура Злого под названием «Как человек тратит $50 000?» с участием Александра «Мистер Бизнес». Полный продакшн и динамичная визуальная съёмка.',
+
+            titleBarber: 'BARBER | СЪЁМКА',
+            descriptionBarber: 'Съёмка и полный постпродакшн концертного выступления Kizaru в Варшаве. Мы реализовали проект под ключ — от материала до финального монтажа.',
+
+            titleKizaru: 'ZLOY & KIZARU | YOUTUBE | СЪЁМКА И МОНТАЖ ОТ GD.FRAME',
+            descriptionKizaru: 'Съёмка YouTube-видео для Артура Злого под названием «Как человек тратит $50 000?» с участием артиста и рэпера Олега Кизару. Полный продакшн на локации, без монтажа.',
+
+            titleMission: 'Миссия невыполнима',
+            descriptionMission: 'Съёмка YouTube-видео для Артура Злого под названием «Как человек тратит $50 000?» с участием артиста и рэпера Олега Кизару. Полный продакшн на локации, без монтажа.',
+
+            TitlePavel: 'ПАВЕЛ АНТОНОВ | СЪЁМКА',
+            descriptionPavel: 'Съёмка рекламного креатива для Павла Антонова',
+
+            TitleJoker: 'JOKER KRASIVO | СЪЁМКА И МОНТАЖ ПРОЕКТА',
+            descriptionJoker: 'Джокер'
           },
           footer: {
             musicVideos: 'Музыкальные видео',

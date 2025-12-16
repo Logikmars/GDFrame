@@ -21,6 +21,7 @@
         display: flex;
         align-items: center;
         transition: color 500ms;
+        pointer-events: all;
 
         @media(max-width: 1000px) {
             font-size: 14px;
@@ -51,6 +52,7 @@
             height: 24px;
             transition: filter 500ms;
             filter: invert(0);
+            pointer-events: all;
 
             @media(max-width: 1000px) {
                 width: 16px;
