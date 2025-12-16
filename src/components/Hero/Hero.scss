@@ -331,23 +331,48 @@
 
             &_5 {
                 @include imgSize(.8);
+                animation: rotanim 10s infinite alternate;
             }
 
             &_4 {
                 @include imgSize(.84);
+                animation: rotanimr 15s infinite alternate;
             }
 
             &_3 {
                 @include imgSize(.5);
+                animation: rotanim 13s infinite alternate;
             }
 
             &_2 {
                 @include imgSize(.36);
+                animation: rotanimr 19s infinite alternate;
             }
 
             &_1 {
                 @include imgSize(.28);
+                animation: rotanim 17s infinite alternate;
             }
+        }
+    }
+
+    @keyframes rotanim {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(30deg);
+        }
+    }
+
+    @keyframes rotanimr {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-30deg);
         }
     }
 
