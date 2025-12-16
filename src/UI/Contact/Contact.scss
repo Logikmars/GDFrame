@@ -1,49 +1,67 @@
-.Contact{
+.Contact {
     width: fit-content;
     gap: 26px;
     justify-content: end;
-    padding: 24px;
-    @media(max-width: 1000px){
+    padding: 16px 24px;
+    background-color: rgba($color: #F5F5F5, $alpha: .04);
+    backdrop-filter: blur(5px);
+    border-radius: 16px 0px 0px 0px;
+    overflow: hidden;
+
+    @media(max-width: 1000px) {
         gap: 13px;
     }
-    &_btn{
+
+    &_btn {
         color: #000;
         font-family: "StapelMedium";
         font-weight: 500;
         font-size: 28px;
         cursor: pointer;
-        @media(max-width: 1000px){
+        display: flex;
+        align-items: center;
+        transition: color 500ms;
+
+        @media(max-width: 1000px) {
             font-size: 14px;
         }
 
-        &_invert{
+        &_invert {
             color: #FFF !important;
         }
     }
-    &_btns{
+
+    &_btns {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 16px;
-        @media(max-width: 1000px){
-            gap: 8px;
+
+        @media(max-width: 1000px) {
+            gap: 12px;
         }
-        &_el{
-            width: 32px;
-            height: 32px;
-            @media(max-width: 1000px){
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        &_el {
+            width: 24px;
+            height: 24px;
+            transition: filter 500ms;
+            filter: invert(0);
+
+            @media(max-width: 1000px) {
                 width: 16px;
                 height: 16px;
             }
-            &_invert{
+
+            &_invert {
                 filter: invert(1);
             }
         }
     }
 
 
-    &_invert{
-        background-color: rgba($color: #F5F5F5, $alpha: .04);
-        backdrop-filter: blur(5px);
-    }
 }

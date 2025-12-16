@@ -1,26 +1,42 @@
-.Header{
+.Header {
     background: transparent;
-    z-index: 9999999999;
+    z-index: 9;
     width: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
-    &_container{
+    background: linear-gradient(to bottom, #000, #0000);
+    opacity: 0;
+    transition: opacity 500ms;
+
+
+
+    &_show {
+        opacity: 1;
+    }
+
+    &_container {
         padding-top: 24px !important;
+        padding-bottom: 24px !important;
         justify-content: space-between !important;
         gap: 20px;
+        pointer-events: none;
     }
-    &_logo{
+
+
+    &_logo {
         width: 10%;
-        @media(max-width: 1000px){
+
+        @media(max-width: 1000px) {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     }
-    &_open{
-        @media(max-width: 1000px){
+
+    &_open {
+        @media(max-width: 1000px) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,7 +45,9 @@
             position: relative;
             gap: 10px;
             flex-direction: column;
-            &_bottom, &_top{
+
+            &_bottom,
+            &_top {
                 background-color: #FFF;
                 width: 100%;
                 height: 2px;
@@ -37,20 +55,24 @@
             }
         }
     }
-    &_content{
+
+    &_content {
         width: 90%;
         justify-content: space-between !important;
         gap: 20px;
-        @media(max-width: 1000px){
+
+        @media(max-width: 1000px) {
             display: none !important;
         }
-        &_nav{
+
+        &_nav {
             width: 90%;
             display: flex;
             justify-content: end;
             align-items: center;
             gap: 24px;
-            &_el{
+
+            &_el {
                 color: #FFF;
                 opacity: .64;
                 font-family: "StapelSemiExpandedMedium";
@@ -58,12 +80,14 @@
                 font-size: 16px;
                 text-transform: uppercase;
                 transition: opacity 300ms;
-                &:hover{
+
+                &:hover {
                     opacity: 1;
                 }
             }
         }
-        &_switch{
+
+        &_switch {
             width: 10%;
             display: flex;
             justify-content: end;
@@ -74,7 +98,7 @@
 
 
 
-    &_modal{
+    &_modal {
         width: 100dvw;
         height: 100dvh;
         inset: 0px;
@@ -84,15 +108,18 @@
         transition: transform 300ms, opacity 300ms;
         opacity: 0;
         z-index: -1;
-        @media(min-width: 1000px){
+
+        @media(min-width: 1000px) {
             display: none !important;
         }
-        &_active{
+
+        &_active {
             transform: translateY(0);
             opacity: 1;
             z-index: 9999999999;
         }
-        &_content{
+
+        &_content {
             width: 100%;
             flex-direction: column;
             gap: 24px;

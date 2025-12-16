@@ -144,7 +144,7 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    
+
 }
 
 
@@ -157,12 +157,18 @@ body {
     justify-content: center;
     background-color: #111111 !important;
     overflow-x: hidden;
-    &_contact{
+
+    &_wrapper {
+        position: relative;
+        z-index: 3;
+    }
+
+    &_contact {
         position: fixed !important;
         min-width: 100% !important;
         display: flex;
         justify-content: end;
-        align-items: start;
+        align-items: end !important;
         z-index: 9999999999999;
         inset: 0;
         top: 92%;
@@ -170,35 +176,35 @@ body {
     }
 }
 
-.container{
+.container {
     max-width: 1900px;
     width: 100%;
     padding: 0px 24px;
 }
 
-.fcc{
+.fcc {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pa24{
+.pa24 {
     padding: 0px 24px;
 }
 
 // Scroll
 /* Для Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 }
 
 /* Для Firefox */
 * {
-  scrollbar-width: none;
+    scrollbar-width: none;
 }
 
 /* Для IE */
 * {
-  -ms-overflow-style: none;
+    -ms-overflow-style: none;
 }

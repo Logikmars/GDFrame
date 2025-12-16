@@ -1,10 +1,12 @@
-.Hero{
+.Hero {
     width: 100dvw;
     height: 100vh;
+    padding: 24px;
     background-color: #FFF;
     z-index: 2;
     padding-bottom: 22px;
-    &_container{
+
+    &_container {
         padding: 24px;
         height: 100%;
         flex-wrap: wrap;
@@ -13,15 +15,19 @@
 
 
 
-    &_down{
+    &_down {
         width: 100%;
         justify-content: space-between !important;
         gap: 20px;
-        &_contact, &_inner, &_percent{
+
+        &_contact,
+        &_inner,
+        &_percent {
             width: calc(33% - 20px);
         }
-        &_contact{
-            justify-content: end !important; 
+
+        &_contact {
+            justify-content: end !important;
         }
     }
 }

@@ -1,45 +1,56 @@
-.Project{
-    width: calc(33% - 24px);
+.Project {
+    width: calc(100%/3 - 16px);
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
     gap: 24px;
-    @media(max-width: 1010px){
-        width: calc(50% - 24px);
+
+    @media(max-width: 1010px) {
+        width: calc(50% - 12px);
     }
-    @media(max-width: 600px){
-        width: calc(100% - 24px);
+
+    @media(max-width: 600px) {
+        width: calc(100%);
     }
-    &_header{
+
+    &_header {
         width: 100%;
         justify-content: start !important;
         gap: 24px;
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             flex-wrap: wrap;
         }
     }
-    &_content{
+
+    &_content {
         width: 100%;
-        img{
+
+        img {
             width: 100%;
         }
     }
-    &_title{
+
+    &_title {
         width: 100%;
         font-family: "StapelSemiExpandedMedium";
         color: #6CFBEF;
         font-size: 28px;
-        &_small{
+
+        &_small {
             font-size: 20px !important;
-            @media(max-width: 600px){
+
+            @media(max-width: 600px) {
                 font-size: 14px;
             }
         }
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             font-size: 16px;
         }
     }
-    &_description{
+
+    &_description {
         width: 100%;
         font-family: "Inter";
         font-weight: 500;
@@ -48,10 +59,11 @@
     }
 
 
-    &_big{
-        width: calc(50% - 24px);
-        @media(max-width: 1010px){
-            width: calc(100% - 24px);
+    &_big {
+        width: calc(50% - 12px);
+
+        @media(max-width: 1010px) {
+            width: calc(100%);
         }
     }
 }

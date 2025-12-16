@@ -19,44 +19,44 @@ i18n
             clients: 'Clients',
             contact: 'Contact'
           },
-            aboutUs: {
-                title: 'About us'
-            },
-            customers: {
-                title: 'Our customers'
-            },
-            contactUs: {
-                title: 'CONTACT US'
-            },
-            projects: {
-                type: 'Type',
-                video: 'Video production',
-                director: 'Director',
-                directorNameF: 'Dima Davydiuk',
-                title: 'ALEX SLOBOZHENKO | YOUTUBE | LAMBORGHINI REVUELTO RECORDING BY GD.FRAME',
-                description: 'Filming a YouTube video for Alexander Slobozhenko; we completed the shoot with two camera operators and also used an FPV drone.',
-                descriprionBiznes: 'ZLOY & MISTER BIZNES | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
-                descriprionKizaru: 'ZLOY & KIZARU | YOUTUBE | RECORDING BY GD.FRAME',
-                descriprionPavel: 'PAVEL ANTONOV | RECORDING',
-                descriprionJoker: 'JOKER KRASIVO PROJECT RECORDING & EDIT'
-            },
-            footer: {
-                musicVideos: 'Music videos',
-                youtubeShows: 'YouTube shows',
-                commercials: 'Commercials and brand films',
-                fashionCampaigns: 'Fashion and lifestyle campaigns',
-                eventCoverage: 'Event coverage',
-                photoProduction: 'Photo production',
-                projectRequests: 'Project requests',
-                directMessages: 'Direct messages',
-                portfolioUpdates: 'Portfolio and updates',
-                leftText: 'Full cycle video production studio.',
-                leftDescription: 'We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.',
-                whatWeDo: 'What we do',
-                collaboration: 'Collaboration',
-                rightText: 'We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.',
-                policyContent: 'Content is an instrument of growth'
-            }
+          aboutUs: {
+            title: 'About us'
+          },
+          customers: {
+            title: 'Our customers'
+          },
+          contactUs: {
+            title: 'CONTACT US'
+          },
+          projects: {
+            type: 'Type',
+            video: 'Video production',
+            director: 'Director',
+            directorNameF: 'Dima Davydiuk',
+            title: 'ALEX SLOBOZHENKO | YOUTUBE | LAMBORGHINI REVUELTO RECORDING BY GD.FRAME',
+            description: 'Filming a YouTube video for Alexander Slobozhenko; we completed the shoot with two camera operators and also used an FPV drone.',
+            descriprionBiznes: 'ZLOY & MISTER BIZNES | YOUTUBE | RECORDING & EDIT BY GD.FRAME',
+            descriprionKizaru: 'ZLOY & KIZARU | YOUTUBE | RECORDING BY GD.FRAME',
+            descriprionPavel: 'PAVEL ANTONOV | RECORDING',
+            descriprionJoker: 'JOKER KRASIVO PROJECT RECORDING & EDIT'
+          },
+          footer: {
+            musicVideos: 'Music videos',
+            youtubeShows: 'YouTube shows',
+            commercials: 'Commercials and brand films',
+            fashionCampaigns: 'Fashion and lifestyle campaigns',
+            eventCoverage: 'Event coverage',
+            photoProduction: 'Photo production',
+            projectRequests: 'Project requests',
+            directMessages: 'Direct messages',
+            portfolioUpdates: 'Portfolio and updates',
+            leftText: 'Full cycle video production studio.',
+            leftDescription: 'We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.',
+            whatWeDo: 'What we do',
+            collaboration: 'Collaboration',
+            rightText: 'We craft cinematic visuals that help brands, artists, and creators stand out. From first idea, casting, and location scouting - to shooting, editing, and delivery of ready to publish content.',
+            policyContent: 'Content is an instrument of growth'
+          }
         }
       },
       RU: {
@@ -68,16 +68,16 @@ i18n
             clients: 'Клієнти',
             contact: 'Контакти'
           },
-        aboutUs: {
+          aboutUs: {
             title: 'Про нас'
-        },
-        customers: {
+          },
+          customers: {
             title: 'Наши клиенты'
-        },
-        contactUs: {
-            title: 'Связатся с нами'
-        },
-        projects: {
+          },
+          contactUs: {
+            title: 'СВЯЗАТЬСЯ С НАМИ'
+          },
+          projects: {
             type: 'Тип',
             video: 'Видеопродакшн',
             director: 'Директор',
@@ -88,8 +88,8 @@ i18n
             descriprionKizaru: 'ZLOY & KIZARU | YOUTUBE | СЪЁМКА ОТ GD.FRAME',
             descriprionPavel: 'PAVEL ANTONOV | СЪЁМКА',
             descriprionJoker: 'JOKER KRASIVO PROJECT СЪЁМКА & EDIT'
-        },
-        footer: {
+          },
+          footer: {
             musicVideos: 'Музыкальные видео',
             youtubeShows: 'YouTube шоу',
             commercials: 'Коммерческие и брендовые фильмы',
@@ -105,7 +105,7 @@ i18n
             collaboration: 'Сотрудничество',
             rightText: 'Мы создаём кинематографические визуалы, которые помогают брендам, артистам и креаторам выделяться. От идеи, кастинга и поиска локаций до съёмки, монтажа и готового к публикации контента.',
             policyContent: 'Контент — инструмент роста'
-        }
+          }
         }
       }
     }

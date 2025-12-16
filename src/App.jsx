@@ -10,6 +10,15 @@ import Hero from './components/Hero/Hero'
 import Projects from './components/Projects/Projects'
 import Contact from './UI/Contact/Contact'
 
+
+import { smoothScrollTo } from "./scroller";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+
 function App() {
   const [invert, setInvert] = useState(false);
   const heroTopRef = useRef(null);
@@ -32,25 +41,45 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <div className="App">
-      <div className="App_contact">
-        <Contact invert={invert} />
-      </div>
 
-      {/* sentinel — верх Hero */}
-      <div ref={heroTopRef} />
+  const wrapperRef = useRef(null);
+  const contentRef = useRef(null);
+  const smootherRef = useRef(null)
 
-      <Hero />
-      <Background />
-      <Header />
-      <AboutUs />
-      <Customers />
-      <Projects />
-      <Gallery />
-      <Footer />
+  useGSAP(() => {
+    const isMobile = ScrollTrigger.isTouch || window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+    if (!isMobile) {
+      smootherRef.current = ScrollSmoother.create({
+        wrapper: wrapperRef.current,
+        content: contentRef.current,
+        smooth: 1,
+      });
+    }
+  }, []);
+
+
+
+  return <>
+    <Header show={invert} />
+    <div className="App_contact">
+      <Contact invert={invert} />
     </div>
-  );
+    <div className='App_wrapper' ref={wrapperRef}>
+      <div className="App" ref={contentRef}>
+
+        <div ref={heroTopRef} />
+
+        <Hero />
+        <Background />
+        <AboutUs />
+        <Customers />
+        <Projects />
+        <Gallery />
+        <Footer />
+      </div>
+    </div>
+  </>
 }
 
 export default App;
