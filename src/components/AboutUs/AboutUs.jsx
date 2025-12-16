@@ -13,7 +13,20 @@ const AboutUs = forwardRef((props, ref) => {
         <div className='AboutUs container fcc' ref={ref}>
             <Title title={t('aboutUs.title')} />
             <div className='AboutUs_content'>
-                <div className='AboutUs_content_left'></div>
+                <div className='AboutUs_content_left fcc'>
+                    <div className='AboutUs_content_left_title'>
+                        {t('aboutUs.leftTitle')}
+                    </div>
+                    <div className='AboutUs_content_left_blue'>
+                        {t('aboutUs.blue')}
+                    </div>
+                    <div className='AboutUs_content_left_description_top'>
+                        {t('aboutUs.desTop')}
+                    </div>
+                    <div className='AboutUs_content_left_description_bottom'>
+                        {t('aboutUs.desBot')}
+                    </div>
+                </div>
                 <div className='AboutUs_content_right'>
                     {
                         els.map((el, index) => (

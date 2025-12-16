@@ -20,7 +20,11 @@ i18n
             contact: 'Contact'
           },
           aboutUs: {
-            title: 'About us'
+            title: 'About us',
+            leftTitle: 'We create visuals that feel.',
+            blue: 'Simple. Clean. Precise.',
+            desTop: 'GD Frame — студия, которая помогает брендам говорить через образ.',
+            desBot: 'Мы снимаем рекламу, YouTube, подкасты и фото, которые остаются в памяти.'
           },
           customers: {
             title: 'Our customers'
