@@ -9,7 +9,11 @@
     overflow: hidden;
 
     @media(max-width: 1000px) {
-        gap: 13px;
+        gap: 20px;
+    }
+
+    &_invert {
+        background-color: rgba($color: #6CFBEF, $alpha: 1);
     }
 
     &_btn {
@@ -24,11 +28,13 @@
         pointer-events: all;
 
         @media(max-width: 1000px) {
-            font-size: 14px;
+            font-size: 20px;
+            padding-top: 2px;
         }
 
         &_invert {
-            color: #FFF !important;
+            color: #000 !important;
+
         }
     }
 
@@ -39,7 +45,7 @@
         gap: 16px;
 
         @media(max-width: 1000px) {
-            gap: 12px;
+            // gap: 12px;
         }
 
         a {
@@ -55,12 +61,12 @@
             pointer-events: all;
 
             @media(max-width: 1000px) {
-                width: 16px;
-                height: 16px;
+                width: 20px;
+                height: 20px;
             }
 
             &_invert {
-                filter: invert(1);
+                // filter: invert(1);
             }
         }
     }

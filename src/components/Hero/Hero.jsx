@@ -4,10 +4,12 @@ import Percent from '../../UI/Percent/Percent';
 import './Hero.scss';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { useTranslation } from 'react-i18next';
 export default () => {
 
     const scope = useRef(null)
     const [progress, setprogress] = useState(0);
+    const { t } = useTranslation();
 
     useGSAP(() => {
         gsap.to('.Hero', {
@@ -38,7 +40,19 @@ export default () => {
                 <div className='Hero_container'>
                     <Logo />
                     <div className='Hero_content'>
-                        <div className='free_img Hero_mask'>
+                        <div className='free_img Hero_scroll' style={{
+                            opacity: progress < .01 ? 1 : 0
+                        }}>
+                            <div className='Hero_scroll_inner'>
+                                <img src="/scrollDownMob.png" className='Hero_scroll_inner_mob' alt="" />
+                                {t('hero.scroll')}
+                                <img src="/scrollDown.png" className='Hero_scroll_inner_pc' alt="" />
+                            </div>
+                        </div>
+
+                        <div className='free_img Hero_mask' style={{
+                            opacity: progress < .01 ? 0 : 1
+                        }}>
                             <div className={`Hero_mask_inner Hero_mask_inner_${Math.min(11, Math.floor(progress * 1.1 * 11))}`}></div>
                         </div>
                         <div className='free_img Hero_content_img Hero_content_img_1'
@@ -83,7 +97,9 @@ export default () => {
                                 transform: `rotate(${progress * 100}deg)`
                             }} />
                         </div>
-                        <div className='free_img Hero_content_img Hero_content_img_6'>
+                        <div className='free_img Hero_content_img Hero_content_img_6' style={{
+                            opacity: progress < .01 ? 0 : 1
+                        }}>
                             <div className={`Hero_decorList Hero_decorList_${Math.min(11, Math.floor(progress * 1.1 * 11))}`}>
                             </div>
                         </div>

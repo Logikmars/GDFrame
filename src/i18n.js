@@ -12,6 +12,9 @@ i18n
     resources: {
       ENG: {
         translation: {
+          hero: {
+            scroll: 'Scroll down',
+          },
           header: {
             photo: 'Photo production',
             video: 'Video production',
@@ -73,6 +76,9 @@ i18n
       },
       RU: {
         translation: {
+          hero: {
+            scroll: 'Листай вниз',
+          },
           header: {
             photo: 'Фотопродакшн',
             video: 'Выдеопродакшн',
