@@ -42,7 +42,7 @@ export default () => {
     };
 
     return (
-        <div className='Customers container fcc'>
+        <div className='Customers container fcc' id='customers'>
             <div className='Customers_header fcc'>
                 <Title title={t('customers.title')} />
                 <SliderBtns onPrev={prev} onNext={next} />

@@ -8,13 +8,36 @@ export default ({ show = false }) => {
 
     const { t } = useTranslation();
 
+    // const els = [
+    //     t('header.photo'),
+    //     t('header.video'),
+    //     t('header.about'),
+    //     t('header.clients'),
+    //     t('header.contact'),
+    // ];
+
     const els = [
-        t('header.photo'),
-        t('header.video'),
-        t('header.about'),
-        t('header.clients'),
-        t('header.contact'),
-    ];
+        {
+            title: t('header.photo'),
+            href: '#photo'
+        },
+        {
+            title: t('header.video'),
+            href: '#video'
+        },
+        {
+            title: t('header.about'),
+            href: '#about'
+        },
+        {
+            title: t('header.clients'),
+            href: '#customers'
+        },
+        {
+            title: t('header.contact'),
+            href: '#contact'
+        }
+    ]
 
     const [active, setactive] = useState(false);
 
@@ -33,7 +56,7 @@ export default ({ show = false }) => {
                     <div className='Header_content_nav'>
                         {
                             els.map((el, index) => (
-                                <a href='#' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el}</a>
+                                <a href={el.href} className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.title}</a>
                             ))
                         }
                     </div>
@@ -47,7 +70,7 @@ export default ({ show = false }) => {
                         <LanguageSwitch />
                         {
                             els.map((el, index) => (
-                                <a href='' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el}</a>
+                                <a href={el.href} className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.title}</a>
                             ))
                         }
                     </div>

@@ -22,11 +22,13 @@ export default () => {
         },
         {
             title: t('footer.directMessages'),
-            src: '@Telegram'
+            src: '@Telegram',
+            href: 'https://t.me/gdframe_manager'
         },
         {
             title: t('footer.portfolioUpdates'),
-            src: '@Instagram'
+            src: '@Instagram',
+            href: 'https://www.instagram.com/gd.frame?igsh=MXdxdnhtMDg2Mzkzdg=='
         }
     ];
 
@@ -61,7 +63,7 @@ export default () => {
                                 <div className='Footer_top_right_contact_el' key={`Footer_top_right_contact_el_${index}`}>
                                     <div className='Footer_top_right_contact_el_top'>{el.title}</div>
                                     {el.href ? (
-                                        <a href={el.href} className='Footer_top_right_contact_el_bottom'>
+                                        <a href={el.href} className='Footer_top_right_contact_el_bottom' target="_blank">
                                             {el.src}
                                         </a>
                                     ) : (

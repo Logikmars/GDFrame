@@ -10,7 +10,7 @@ const AboutUs = forwardRef((props, ref) => {
     const els = ['./fGuy.webp', './secGuy.webp']
 
     return (
-        <div className='AboutUs container fcc' ref={ref}>
+        <div className='AboutUs container fcc' ref={ref} id='about'>
             <Title title={t('aboutUs.title')} />
             <div className='AboutUs_content'>
                 <div className='AboutUs_content_left fcc'>
