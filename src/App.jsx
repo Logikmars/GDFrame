@@ -145,7 +145,6 @@ function App() {
         <AboutUs />
         <Customers />
         <Projects />
-        {/* <Gallery /> */}
         <Gallery onOpen={open} total={TOTAL} />
 
         <Footer />

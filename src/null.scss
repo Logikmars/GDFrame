@@ -155,11 +155,15 @@ body {
 
 .App {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     min-height: 100dvh;
+    // align-items: center;
+    // align-content: start;
+    // justify-content: center;
+    flex-direction: column;
     align-items: center;
-    align-content: start;
-    justify-content: center;
+    background: url('/bg.svg');
+    background-attachment: fixed;
     background-color: #111111 !important;
     overflow-x: hidden;
 

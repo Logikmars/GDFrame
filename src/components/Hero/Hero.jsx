@@ -28,12 +28,19 @@ export default () => {
         });
     }, { scope })
 
+
     return (
         <div ref={scope}>
+
+
+            <div class="box"></div>
             <div className='Hero'>
                 <div className='Hero_container'>
                     <Logo />
                     <div className='Hero_content'>
+                        <div className='free_img Hero_mask'>
+                            <div className={`Hero_mask_inner Hero_mask_inner_${Math.min(11, Math.floor(progress * 1.1 * 11))}`}></div>
+                        </div>
                         <div className='free_img Hero_content_img Hero_content_img_1'
                             style={{
                                 opacity: progress < .5 ? 0 : 1
