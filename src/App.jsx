@@ -20,27 +20,38 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
 
 
 function App() {
-  const [invert, setInvert] = useState(false);
+  const [botInvert, setbotInvert] = useState(false);
+  const [showHeader, setshowHeader] = useState(false);
   const heroTopRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setInvert(!entry.isIntersecting);
+    const el = heroTopRef.current;
+    if (!el) return;
+
+    const topObs = new IntersectionObserver(
+      ([e]) => {
+        // true, когда элемент УЖЕ выше верхней границы (проскроллили вниз)
+        setshowHeader(e.boundingClientRect.top < 0);
       },
       {
         threshold: 0,
-        rootMargin: '-50% 0px 0px 0px',
+        rootMargin: '0px',
       }
     );
 
-    if (heroTopRef.current) {
-      observer.observe(heroTopRef.current);
-    }
+    const bottomObs = new IntersectionObserver(
+      ([e]) => setbotInvert(!e.isIntersecting),
+      { threshold: 0, rootMargin: '-99% 0px 0px 0px' } // нижняя "полоса" 1% экрана
+    );
 
-    return () => observer.disconnect();
+    topObs.observe(el);
+    bottomObs.observe(el);
+
+    return () => {
+      topObs.disconnect();
+      bottomObs.disconnect();
+    };
   }, []);
-
 
   const wrapperRef = useRef(null);
   const contentRef = useRef(null);
@@ -61,16 +72,15 @@ function App() {
 
 
   return <>
-    <Header show={invert} />
+    <Header show={showHeader} />
     <div className="App_contact">
-      <Contact invert={invert} />
+      <Contact invert={botInvert} />
     </div>
     <div className='App_wrapper' ref={wrapperRef}>
       <div className="App" ref={contentRef}>
 
-        <div ref={heroTopRef} />
-
         <Hero />
+        <div className='heroTopRef' ref={heroTopRef} />
         <Background />
         <AboutUs />
         <Customers />

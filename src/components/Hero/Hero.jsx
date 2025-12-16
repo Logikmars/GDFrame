@@ -3,6 +3,9 @@ import Logo from '../../UI/Logo/Logo';
 import Percent from '../../UI/Percent/Percent';
 import './Hero.scss';
 export default () => {
+
+
+
     return (
         <div className='Hero fcc'>
             <div className='container Hero_container fcc'>
