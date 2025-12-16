@@ -1,8 +1,8 @@
 import Type from '../Type/Type';
 import './Project.scss';
-export default ({ big, type, typetext, director, directortext, img, title, description }) => {
+export default ({ big, type, typetext, director, directortext, img, title, description, href }) => {
     return (
-        <div className={`Project ${big && 'Project_big'}`}>
+        <a className={`Project ${big && 'Project_big'}`} href={href} target="_blank">
             <div className='Project_header fcc'>
                 <Type type={type} text={typetext}/>
                 {director && <Type type={director} text={directortext} />}
@@ -16,6 +16,6 @@ export default ({ big, type, typetext, director, directortext, img, title, descr
             <div className='Project_description'>
                 {description}
             </div>
-        </div>
+        </a>
     )
 }
