@@ -48,9 +48,9 @@ export default () => {
                 <SliderBtns onPrev={prev} onNext={next} />
             </div>
 
-            <div className='Customers_decor free_img'>
+            {/* <div className='Customers_decor free_img'>
                 <Contact invert />
-            </div>
+            </div> */}
 
             <div className='Customers_slider'>
                 <div

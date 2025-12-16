@@ -7,13 +7,7 @@ export default () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [rect, setRect] = useState(null);
   const [expanded, setExpanded] = useState(false);
-
-  const items = Array(36).fill(0);
-
-  const columns = [];
-  for (let i = 0; i < items.length; i += 6) {
-    columns.push(items.slice(i, i + 6));
-  }
+  const [closing, setClosing] = useState(false);
 
   const onImageClick = (e, idx) => {
     const r = e.currentTarget.getBoundingClientRect();
@@ -27,24 +21,26 @@ export default () => {
   };
 
   const close = () => {
-    setExpanded(false);
+    setClosing(true);
     setTimeout(() => {
+      setClosing(false);
       setActiveIndex(null);
       setRect(null);
+      setExpanded(false);
     }, 500);
   };
 
   const prev = () => {
     setActiveIndex((i) => {
       if (i === null) return i;
-      return (i - 1 + items.length) % items.length;
+      return (i - 1 + 36) % 36;
     });
   };
 
   const nextImage = () => {
     setActiveIndex((i) => {
       if (i === null) return i;
-      return (i + 1) % items.length;
+      return (i + 1) % 36;
     });
   };
 
@@ -63,10 +59,11 @@ export default () => {
 
   return (
     <div className="Gallery container fcc">
-      {columns.map((col, colIndex) => (
-        <div className="Gallery_col" key={colIndex}>
-          {col.map((_, index) => (
-            <div className='Gallery_col_el fcc' key={`col_${colIndex}_${index}`}>
+      <div className='Gallery_content'>
+        {Array(36)
+        .fill(0)
+        .map((_, index) => {
+          return <div className='Gallery_col_el fcc' key={`col__${index}`}>
               <div className='Gallery_col_el_top free_img'>
                 <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className='Gallery_col_el_top_left Gallery_col_el_top_el'>
                   <path d="M8.66699 9.83337L8.66699 0.5L0.000325225 0.5" stroke="#0D0D0D"/>
@@ -75,12 +72,12 @@ export default () => {
                   <path d="M8.66699 9.83337L8.66699 0.5L0.000325225 0.5" stroke="#0D0D0D"/>
                 </svg>
               </div>
-              <img
-                key={`Gallery_${colIndex}_${index}`}
-                src={`./gallery/woman${colIndex * 6 + index + 1}.webp`}
-                alt=""
-                onClick={(e) => onImageClick(e, colIndex * 6 + index)}
-              />
+                <img
+                  key={`Gallery__${index}`}
+                  src={`./gallery/woman${index + 1}.webp`}
+                  alt=""
+                  onClick={(e) => onImageClick(e, index)}
+                />
               <div className='Gallery_col_el_bottom free_img'>
                 <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className='Gallery_col_el_bottom_left Gallery_col_el_bottom_el'>
                   <path d="M8.66699 9.83337L8.66699 0.5L0.000325225 0.5" stroke="#0D0D0D"/>
@@ -90,15 +87,14 @@ export default () => {
                 </svg>
               </div>
             </div>
-          ))}
-        </div>
-      ))}
+        })}
+      </div>
       <div className='Gallery_up fcc'>
         <UpBtn />
       </div>
 
       {activeIndex !== null && rect && (
-        <div className="Gallery_modal">
+        <div className={`Gallery_modal ${closing ? 'closing' : ''}`}>
           <div className='Gallery_modal_left'>
               <img src="./btnArrow.svg" alt="prev" onClick={prev} />
           </div>

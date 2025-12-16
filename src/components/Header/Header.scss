@@ -2,6 +2,9 @@
     background: transparent;
     z-index: 9999999999;
     width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     &_container{
         padding-top: 24px !important;
         justify-content: space-between !important;
