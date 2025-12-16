@@ -63,7 +63,7 @@ export const GalleryModal = ({
 
 export const Gallery = ({ onOpen, total = 36 }) => {
   return (
-    <div className="Gallery container fcc">
+    <div className="Gallery container fcc photo" id='photo'>
       <div className="Gallery_content">
         {Array(total)
           .fill(0)

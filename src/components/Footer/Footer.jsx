@@ -31,11 +31,11 @@ export default () => {
     ];
 
     return (
-        <div className='Footer fcc'>
+        <div className='Footer fcc contact'>
             <div className='Footer_container container fcc'>
                 <div className='Footer_top'>
                     <div className='Footer_top_left'>
-                        <Title title={'GD FRAME'} small/>
+                        <Title title={'GD FRAME'} small />
                         <div className='Footer_top_left_text'>
                             {t('footer.leftText')}
                         </div>
@@ -44,7 +44,7 @@ export default () => {
                         </div>
                     </div>
                     <div className='Footer_top_middle'>
-                        <Title title={t('footer.whatWeDo')} small/>
+                        <Title title={t('footer.whatWeDo')} small />
                         <div className='Footer_top_middle_list'>
                             {list.map((el, index) => (
                                 <div className='Footer_top_middle_list_el' key={`Footer_top_middle_list_el_${index}`}>{el}</div>
@@ -52,7 +52,7 @@ export default () => {
                         </div>
                     </div>
                     <div className='Footer_top_right'>
-                        <Title title={t('footer.collaboration')} small/>
+                        <Title title={t('footer.collaboration')} small />
                         <div className='Footer_top_right_text'>
                             {t('footer.rightText')}
                         </div>

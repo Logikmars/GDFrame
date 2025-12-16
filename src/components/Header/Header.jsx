@@ -3,17 +3,33 @@ import LanguageSwitch from '../../UI/LanguageSwitch/LanguageSwitch';
 import Logo from '../../UI/Logo/Logo';
 import './Header.scss';
 import { useTranslation } from 'react-i18next';
+import { smoothScrollTo } from '../../scroller';
 
 export default ({ show = false }) => {
 
     const { t } = useTranslation();
 
     const els = [
-        t('header.photo'),
-        t('header.video'),
-        t('header.about'),
-        t('header.clients'),
-        t('header.contact'),
+        {
+            text: t('header.photo'),
+            to: '.photo',
+        },
+        {
+            text: t('header.video'),
+            to: '.video',
+        },
+        {
+            text: t('header.about'),
+            to: '.aboutus',
+        },
+        {
+            text: t('header.clients'),
+            to: '.clients',
+        },
+        {
+            text: t('header.contact'),
+            to: '.contact',
+        },
     ];
 
     const [active, setactive] = useState(false);
@@ -33,7 +49,10 @@ export default ({ show = false }) => {
                     <div className='Header_content_nav'>
                         {
                             els.map((el, index) => (
-                                <a href='#' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el}</a>
+                                <a
+                                    //  href={el.to}
+                                    onClick={() => { smoothScrollTo(el.to) }}
+                                    className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.text}</a>
                             ))
                         }
                     </div>
@@ -47,7 +66,7 @@ export default ({ show = false }) => {
                         <LanguageSwitch />
                         {
                             els.map((el, index) => (
-                                <a href='' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el}</a>
+                                <a href='' className='Header_content_nav_el' key={`Header_content_nav_el_${index}`}>{el.text}</a>
                             ))
                         }
                     </div>

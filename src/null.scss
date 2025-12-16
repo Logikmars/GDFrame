@@ -154,6 +154,7 @@ body {
 }
 
 .App {
+    scroll-behavior: smooth;
     display: flex;
     // flex-wrap: wrap;
     min-height: 100dvh;
@@ -169,6 +170,7 @@ body {
 
     &_wrapper {
         position: relative;
+        scroll-behavior: smooth;
         z-index: 3;
     }
 

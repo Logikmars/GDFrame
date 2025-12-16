@@ -88,10 +88,10 @@ export default () => {
     ]
 
     return (
-        <div className='Projects container'>
+        <div className='Projects container video'>
             {
                 projects.map((el, index) => (
-                    <Project big={el.big} type={el.type} typetext={el.typetext} director={el.director} directortext={el.directortext} img={el.img} title={el.title} description={el.description} href={el.href} key={`Project_el_key_${index}`}/>
+                    <Project big={el.big} type={el.type} typetext={el.typetext} director={el.director} directortext={el.directortext} img={el.img} title={el.title} description={el.description} href={el.href} key={`Project_el_key_${index}`} />
                 ))
             }
         </div>
