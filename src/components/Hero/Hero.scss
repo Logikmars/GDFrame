@@ -1,6 +1,6 @@
 .Hero {
     width: 100vw;
-    height: 7000px;
+    height: 4000px;
     background-color: #FFF;
     z-index: 2;
 
@@ -10,8 +10,8 @@
         &_inner {
             display: flex;
             align-items: center;
-            font-size: 32px;
-            font-family: "StapelSemiExpandedMedium";
+            font-size: 28px;
+            font-family: "StapelMedium";
             color: #000;
             white-space: nowrap;
             flex-direction: column;
@@ -86,7 +86,7 @@
             }
 
             img {
-                width: 100px;
+                width: 80px;
             }
         }
     }
@@ -422,6 +422,7 @@
             &_5 {
                 @include imgSize(.8);
                 animation: rotanim 10s infinite alternate;
+
             }
 
             &_4 {
