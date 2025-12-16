@@ -13,7 +13,7 @@ export default () => {
                 <div className='Hero_down fcc'>
                     <div className='Hero_down_inner'></div>
                     <div className='Hero_down_percent fcc'>
-                        <Percent percent={94}/>
+                        <Percent percent={94} />
                     </div>
                     <div className='Hero_down_contact fcc'>
                         <Contact />
