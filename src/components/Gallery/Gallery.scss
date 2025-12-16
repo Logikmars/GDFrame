@@ -1,4 +1,4 @@
-.Gallery{
+.Gallery {
     margin-top: 160px;
     flex-wrap: wrap;
     gap: 24px;
@@ -6,35 +6,42 @@
     align-items: start !important;
     z-index: 99999999;
     justify-content: space-between !important;
-    @media(max-width: 1000px){
+
+    @media(max-width: 1000px) {
         gap: 12px;
     }
-    @media(max-width: 500px){
+
+    @media(max-width: 500px) {
         gap: 6px;
     }
 
-    &_content{
+    &_content {
         column-count: 6;
         column-gap: 12px;
-        @media(max-width: 1250px){
+
+        @media(max-width: 1250px) {
             column-count: 5;
         }
-        @media(max-width: 800px){
+
+        @media(max-width: 800px) {
             column-count: 4;
         }
-        @media(max-width: 650px){
+
+        @media(max-width: 650px) {
             column-count: 3;
         }
-        @media(max-width: 460px){
+
+        @media(max-width: 460px) {
             column-count: 2;
         }
-        img{
+
+        img {
             width: 100%;
         }
     }
 
-    &_col{
-        &_el{
+    &_col {
+        &_el {
             background-color: #FFF;
             flex-wrap: wrap;
             align-content: space-between;
@@ -47,38 +54,47 @@
             cursor: pointer;
             margin-bottom: 12px;
             height: fit-content;
-            &:hover{
-                img{
+
+            &:hover {
+                img {
                     scale: .95;
                 }
+
                 .Gallery_col_el_top,
                 .Gallery_col_el_bottom {
                     opacity: 1;
                 }
             }
-            img{
+
+            img {
                 width: 100%;
                 transition: scale 3s;
             }
-            &_top, &_bottom{
+
+            &_top,
+            &_bottom {
                 min-width: 100% !important;
                 justify-content: space-between !important;
                 align-items: start !important;
                 z-index: 4;
                 opacity: 0;
+
                 // transition: opacity 100ms;
-                &_el{
+                &_el {
                     width: 28px;
                     height: 28px;
-                    @media(max-width: 1000px){
+
+                    @media(max-width: 1000px) {
                         width: 14px;
                         height: 14px;
                     }
-                    @media(max-width: 500px){
+
+                    @media(max-width: 500px) {
                         width: 7px;
                         height: 7px;
                     }
-                    path{
+
+                    path {
                         // stroke: #FFF;
                         stroke-dasharray: 30;
                         stroke-dashoffset: 30;
@@ -89,25 +105,30 @@
                             stroke-dashoffset 400ms ease;
                     }
                 }
-                &_left{
+
+                &_left {
                     rotate: 270deg;
                     position: relative;
                     top: -2px;
                 }
-                &_right{
+
+                &_right {
                     position: relative;
                     left: 2px;
                 }
             }
-            &_bottom{
+
+            &_bottom {
                 align-items: end !important;
-                &_left{
+
+                &_left {
                     rotate: 180deg;
                     position: relative;
                     right: 2px;
                     top: -.5px;
                 }
-                &_right{
+
+                &_right {
                     rotate: 90deg;
                     position: relative;
                     left: -1px;
@@ -116,7 +137,8 @@
             }
         }
     }
-    &_up{
+
+    &_up {
         width: 100%;
         justify-content: end !important;
     }
@@ -127,20 +149,20 @@
 }
 
 .Gallery_modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.9);
-  z-index: 999999999;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .9);
+    z-index: 999999999;
     opacity: 1;
     transition: opacity 500ms ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &_img {
         position: absolute;
         object-fit: contain;
-                transition: top 500ms ease, left 500ms ease, width 500ms ease, height 500ms ease, transform 500ms ease, opacity 500ms ease;
+        transition: top 500ms ease, left 500ms ease, width 500ms ease, height 500ms ease, transform 500ms ease, opacity 500ms ease;
 
         &.active {
             top: 50%;
@@ -150,37 +172,60 @@
             transform: translate(-50%, -50%);
         }
     }
-        &.closing {
+
+    &.closing {
+        opacity: 0;
+        pointer-events: none;
+
+        .Gallery_modal_img {
             opacity: 0;
-            pointer-events: none;
-            .Gallery_modal_img {
-                opacity: 0;
+        }
+    }
+
+    &_rlBtn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background: #f002;
+        cursor: pointer;
+
+        &:hover {
+            img {
+                scale: 1.1;
+                opacity: 1;
             }
         }
-    &_left, &_right{
+    }
+
+    &_left,
+    &_right {
         width: 10%;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 99999;
-        img{
+
+        img {
             opacity: .6;
             transition: scale 300ms, opacity 300ms;
             cursor: pointer;
-            &:hover{
-                scale: 1.1;
-                opacity: 1;
-            }
+
         }
     }
-    &_right{
+
+    &_right {
         flex-wrap: wrap;
         align-content: space-between;
-        img{
+
+        img {
             rotate: 180deg;
         }
-        &_exit, &_inner{
+
+        &_exit,
+        &_inner {
             width: 100%;
             display: flex;
             justify-content: center;

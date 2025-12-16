@@ -76,6 +76,10 @@ export default () => {
                                 transform: `rotate(${progress * 100}deg)`
                             }} />
                         </div>
+                        <div className='free_img Hero_content_img Hero_content_img_6'>
+                            <div className={`Hero_decorList Hero_decorList_${Math.min(11, Math.floor(progress * 1.1 * 11))}`}>
+                            </div>
+                        </div>
                     </div>
                     <div className='Hero_down fcc'>
                         <Percent percent={Math.floor(progress * 100)} />

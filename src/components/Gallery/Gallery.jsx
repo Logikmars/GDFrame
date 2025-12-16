@@ -36,7 +36,10 @@ export const GalleryModal = ({
   return (
     <div className={`Gallery_modal ${closing ? 'closing' : ''}`}>
       <div className="Gallery_modal_left">
-        <img src="./btnArrow.svg" alt="prev" onClick={onPrev} />
+        <div className='Gallery_modal_rlBtn' onClick={onPrev}>
+
+          <img src="./btnArrow.svg" alt="prev" />
+        </div>
       </div>
 
       <img
@@ -45,11 +48,13 @@ export const GalleryModal = ({
         style={style}
       />
 
-      <div className="Gallery_modal_right">
+      <div className="Gallery_modal_right" >
         <div className="Gallery_modal_right_exit">
           <img src="./close.svg" alt="" onClick={onClose} />
         </div>
-        <img src="./btnArrow.svg" alt="next" onClick={onNext} />
+        <div className='Gallery_modal_rlBtn' onClick={onNext}>
+          <img src="./btnArrow.svg" alt="next" />
+        </div>
         <div className="Gallery_modal_right_inner" />
       </div>
     </div>

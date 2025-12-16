@@ -21,6 +21,10 @@
         }
     }
 
+    &_decorList {
+        background: url('/heroDecorList.webp');
+    }
+
     &_content {
         display: flex;
         justify-content: center;
@@ -42,6 +46,78 @@
                     max-height: calc(#{$size} * var(--size_kef) * 100vh);
                     max-width: calc(#{$size} * var(--size_kef) * 100vw);
                 }
+
+                .Hero_decorList {
+                    min-height: calc(#{$size} * var(--size_kef) * 100vh);
+                    max-height: calc(#{$size} * var(--size_kef) * 100vh);
+                    max-width: calc(#{$size} * var(--size_kef) * 100vh);
+                    min-width: calc(#{$size} * var(--size_kef) * 100vh);
+                    border-radius: 500px;
+                    background-size: calc(#{$size} * var(--size_kef) * 100vh * 4);
+
+                    &_0 {
+                        background-position: 0px 0px;
+                    }
+
+                    &_1 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -1) 0px;
+                    }
+
+                    &_2 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -2) 0px;
+                    }
+
+                    &_3 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -3) 0px;
+                    }
+
+                    &_4 {
+                        background-position: 0px calc(#{$size} * var(--size_kef) * 100vh * 1);
+                    }
+
+                    &_5 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -1) calc(#{$size} * var(--size_kef) * 100vh * 1);
+                    }
+
+                    &_6 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -2) calc(#{$size} * var(--size_kef) * 100vh * 1);
+                    }
+
+                    &_7 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -3) calc(#{$size} * var(--size_kef) * 100vh * 1);
+                    }
+
+                    &_8 {
+                        background-position: 0px calc(#{$size} * var(--size_kef) * 100vh * 2);
+                    }
+
+                    &_9 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -1) calc(#{$size} * var(--size_kef) * 100vh * 2);
+                    }
+
+                    &_10 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -2) calc(#{$size} * var(--size_kef) * 100vh * 2);
+                    }
+
+                    &_11 {
+                        background-position: calc(#{$size} * var(--size_kef) * 100vh * -3) calc(#{$size} * var(--size_kef) * 100vh * 2);
+                    }
+
+
+                    @media(max-width: 700px) {
+                        min-height: calc(#{$size} * var(--size_kef) * 100vw);
+                        max-height: calc(#{$size} * var(--size_kef) * 100vw);
+                        max-width: calc(#{$size} * var(--size_kef) * 100vw);
+                        min-width: calc(#{$size} * var(--size_kef) * 100vw);
+                        background-size: calc(#{$size} * var(--size_kef) * 100vw * 4);
+                    }
+
+                }
+            }
+
+            &_6 {
+                @include imgSize(.2);
+                opacity: 1;
             }
 
             &_5 {
