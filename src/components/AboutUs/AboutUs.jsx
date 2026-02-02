@@ -7,7 +7,7 @@ const AboutUs = forwardRef((props, ref) => {
 
     const { t } = useTranslation();
 
-    const els = ['./fGuy.webp', './secGuy.webp']
+    const els = ['./secGuy2.webp', './secGuy.webp']
 
     return (
         <div className='AboutUs aboutus container fcc' ref={ref}>
