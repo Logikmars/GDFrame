@@ -6,12 +6,15 @@ export default () => {
     const { t } = useTranslation();
 
     const list = [
-        t('footer.musicVideos'),
-        t('footer.youtubeShows'),
-        t('footer.commercials'),
-        t('footer.fashionCampaigns'),
-        t('footer.eventCoverage'),
-        t('footer.photoProduction')
+        t('footer.wwd1'),
+        t('footer.wwd2'),
+        t('footer.wwd3'),
+        t('footer.wwd4'),
+        t('footer.wwd5'),
+        t('footer.wwd6'),
+        t('footer.wwd7'),
+        t('footer.wwd8'),
+        t('footer.wwd9'),
     ];
 
     const contact = [
