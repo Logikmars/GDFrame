@@ -23,9 +23,9 @@ const AboutUs = forwardRef((props, ref) => {
                     <div className='AboutUs_content_left_description_top'>
                         {t('aboutUs.desTop')}
                     </div>
-                    <div className='AboutUs_content_left_description_bottom'>
+                    {/* <div className='AboutUs_content_left_description_bottom'>
                         {t('aboutUs.desBot')}
-                    </div>
+                    </div> */}
                 </div>
                 <div className='AboutUs_content_right'>
                     {

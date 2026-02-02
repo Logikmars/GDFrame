@@ -11,14 +11,15 @@ export default () => {
 
     const els = [
         { src: './customers/yodezeen.webp', title: 'yodezeen' },
-        { src: './customers/annatrincher.webp', title: 'annatrincher' },
         { src: './customers/slobozhenko.webp', title: <>alex <br /> slobozhenko</> },
+        { src: './customers/kiev.webp', title: 'kievstoner' },
         { src: './customers/zloylive.webp', title: 'zloylive' },
         { src: './customers/korolova.webp', title: 'korolova.dj' },
         { src: './customers/kizaru.webp', title: <>OLEG <br /> KIZARU</> },
         { src: './customers/tymoshenko.webp', title: 'tymoshenko' },
         { src: './customers/lerarumaa.webp', title: 'lera_rumaa' },
-        { src: './customers/sashachistova.webp', title: 'sashachistova' }
+        { src: './customers/sashachistova.webp', title: 'sashachistova' },
+        { src: './customers/annatrincher.webp', title: 'annatrincher' },
     ];
 
     const CARD_WIDTH = 178 + 24;

@@ -55,7 +55,7 @@ export default () => {
                     </div>
                     <div className='Footer_top_right'>
                         <Title title={t('footer.collaboration')} small />
-                        <div className='Footer_top_right_text'>
+                        <div className='Footer_top_right_text' style={{ whiteSpace: "pre-line" }}>
                             {t('footer.rightText')}
                         </div>
                         <div className='Footer_top_right_contact'>

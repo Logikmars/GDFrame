@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import i18n from "../i18n";
+import i18n from "../i18n.jsx";
 
 class LanguageStore {
   activeLanguage = 'ENG';
